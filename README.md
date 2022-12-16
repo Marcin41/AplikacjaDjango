@@ -1,3 +1,6 @@
+Uruchomienie projektu:
+Wejście konsolą w Projekt\AplikacjaDjango i wykonanie komendy: python manage.py runserver
+
 Otworzenie panelu administratora:
 http://127.0.0.1:8000/admin
 Login : dsw
