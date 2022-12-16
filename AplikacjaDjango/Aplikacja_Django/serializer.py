@@ -21,9 +21,15 @@ class MovieSerializer (serializers.HyperlinkedModelSerializer):
         fields = ['title', 'slug', 'description', 'actors', 'director', 'created', 'updated', 'no_of_ratings', 'mean_rating']
 
 
+class UserSerializer(serializers.Serializer):
+    class Meta:
+        model = User
+        fields = ('username')
+
+
 class RatingSerializer (serializers.HyperlinkedModelSerializer):
     movie = MovieSerializer(many=False)
-
+    user = UserSerializer(many=False)
 
     class Meta:
         model = Rating
