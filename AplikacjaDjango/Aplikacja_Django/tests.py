@@ -18,11 +18,3 @@ class ActorORMTest(TestCase):
         actor.save()
         actor_updated = Actor.objects.get(name="Marek")
         self.assertEqual(actor_updated.name, "Marek")
-
-
-
-all = Movie.objects.all()
-
-get_filter = Movie.objects.get(title="Top Gun: Maverick")
-
-order_by = Rating.objects.order_by('stars')
